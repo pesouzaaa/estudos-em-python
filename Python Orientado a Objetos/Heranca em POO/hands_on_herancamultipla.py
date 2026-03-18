@@ -10,6 +10,7 @@ class Ave(Animal):
         super().__init__(**kw)
         self.cor_bico = cor_bico
 
+
 class Mamifero(Animal):
     def __init__(self, cor_pelo, **kw): #**kw -> Kwargs
         super().__init__(**kw)
@@ -20,7 +21,11 @@ class Gato(Mamifero):
 
 
 class Ornitorrinco(Mamifero, Ave):
-    pass
+    def __init__(self, cor_bico, cor_pelo, nro_patas):
+
+        #print(Ornitorrinco.__mro__)# Mostra a ordem de resolucao
+
+        super().__init__(cor_pelo=cor_pelo, cor_bico=cor_bico, nro_patas=nro_patas)
 
 gato = Gato(nro_patas=4, cor_pelo="Preto")
 print (gato)
