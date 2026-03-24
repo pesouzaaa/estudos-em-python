@@ -15,8 +15,8 @@ def mostrar_valores(*objs):
     
 pe = Estudante("Pedro", 609843)
 babi = Estudante("Barbara", 8209383)
-
 mostrar_valores(pe, babi)
 
-print(babi)
-print(pe)
+Estudante.escola = "NewSchool"
+thico = Estudante("Thiago", 9023309)
+mostrar_valores(pe, babi, thico)
